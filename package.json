@@ -18,7 +18,7 @@
     "web-vitals": "^1.1.2",
     "yarn": "^1.22.17"
   },
-  "homepage": "https://artashesgiv.github.io/homeworks",
+  "homepage": "https://artashesgiv.github.io/portfolio",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
