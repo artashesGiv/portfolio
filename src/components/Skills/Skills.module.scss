@@ -1,0 +1,32 @@
+@import 'src/style/mixins';
+
+.skillsBlock {
+   min-height: 50vh;
+   background-color: brown;
+   padding: 30px 0;
+
+   .container {
+      @include container;
+      flex-direction: column;
+      justify-content: space-around;
+   }
+
+   .blockName {
+
+   }
+
+   .items {
+      @include itemsBlock;
+
+      img {
+         width: 150px;
+         height: 106px;
+      }
+   }
+
+   @media (max-width: 1624px) {
+      .items {
+         justify-content: space-around;
+      }
+   }
+}
