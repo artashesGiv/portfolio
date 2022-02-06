@@ -1,0 +1,30 @@
+@import 'src/style/mixins';
+
+.menu {
+   height: 80px;
+
+   .container {
+      @include container;
+      justify-content: flex-start;
+   }
+
+   .nav {
+      //border: 1px solid;
+      display: flex;
+      justify-content: space-between;
+      ul {
+         display: flex;
+         padding: 0;
+         li {
+            list-style: none;
+            width: 125px;
+            a {
+               @include Link
+            }
+         }
+      }
+
+   }
+}
+
+

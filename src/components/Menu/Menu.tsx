@@ -1,10 +1,10 @@
 import React from 'react'
-import s from './Header.module.scss'
+import s from './Menu.module.scss'
 import {Nav} from './Nav/Nav'
 
-export const Header = () => {
+export const Menu = () => {
    return (
-      <div className={s.header}>
+      <div className={s.menu}>
          <div className={s.container}>
             <Nav/>
          </div>
