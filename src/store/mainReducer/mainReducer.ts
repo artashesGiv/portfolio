@@ -1,6 +1,5 @@
 import {initialStateMainType} from './types'
 
-
 const initialStateMain: initialStateMainType = {
    profile: {
       name: 'Арташес Дживанян',
@@ -31,6 +30,4 @@ export const mainReducer = (state: initialStateMainType = initialStateMain, acti
    }
 }
 
-type actionsTypes = ReturnType<typeof qwe>
-
-export const qwe = () => ({type: ''} as const)
+type actionsTypes = any

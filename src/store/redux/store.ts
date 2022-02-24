@@ -1,8 +1,10 @@
 import {combineReducers, createStore} from 'redux'
-import {mainReducer} from '../mainReduser/mainReduser'
+import {mainReducer} from '../mainReducer/mainReducer'
+import {resumeReducer} from '../resumeReducer/resumeReducer'
 
 export const rootReducer = combineReducers({
-   main: mainReducer
+   main: mainReducer,
+   resume: resumeReducer,
 })
 
 export type AppStateType = ReturnType<typeof rootReducer>

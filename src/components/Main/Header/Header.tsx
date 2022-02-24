@@ -2,7 +2,7 @@ import React from 'react'
 import s from '../Main.module.scss'
 import {Menu} from '../../Menu/Menu'
 import {useMediaQuery} from 'react-responsive'
-import {profileType} from '../../../store/mainReduser/types'
+import {profileType} from '../../../store/mainReducer/types'
 import moment from 'moment'
 
 type HeaderPropsType = {

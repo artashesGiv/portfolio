@@ -4,7 +4,7 @@ import {Header} from './Header/Header'
 import {Hello} from './Hello/Hello'
 import {useSelector} from 'react-redux'
 import {AppStateType} from '../../store/redux/store'
-import {initialStateMainType} from '../../store/mainReduser/types'
+import {initialStateMainType} from '../../store/mainReducer/types'
 
 export const Main = () => {
 

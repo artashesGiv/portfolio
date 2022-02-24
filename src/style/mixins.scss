@@ -1,3 +1,5 @@
+@import 'src/style/variables';
+
 @mixin container {
    display: flex;
    justify-content: space-between;
@@ -6,7 +8,6 @@
    width: 60%;
    margin: 0 auto;
    padding: 20px 15px;
-   //border: 2px solid blue;
 
    @media (max-width: 1200px) {
       width: 80%;
@@ -37,7 +38,7 @@
    width: 170px;
    height: 50px;
    padding: 15px;
-   background: #6d56c1;
+   background: $main-color;
    border-radius: 25px;
    font: 14px Roboto, sans-serif;
    color: #fff;
@@ -47,7 +48,7 @@
    outline: none;
    &:hover {
       cursor: pointer;
-      background: rgba(109, 86, 193, 0.8);
+      background: lighten($main-color, 3%);
    }
 }
 
@@ -60,7 +61,7 @@
    text-transform: uppercase;
    font-weight: 700;
    &:hover {
-      color: rgba(255, 255, 255, 0.7);
+      color: darken(#fff, 15%);
 
       &:after {
          content: '_';

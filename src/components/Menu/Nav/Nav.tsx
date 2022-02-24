@@ -6,7 +6,7 @@ export const Nav = () => {
       <div className={s.nav}>
          <ul>
             <li><a href={'#hello'}>Привет</a></li>
-            <li><a href={'#skills'}>Скиллы</a></li>
+            <li><a href={'#resume'}>Скиллы</a></li>
             <li><a href={'#projects'}>Проекты</a></li>
             <li><a href={'#contacts'}>Контакты</a></li>
          </ul>

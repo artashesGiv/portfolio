@@ -1,0 +1,111 @@
+@import 'src/style/mixins';
+
+.resume {
+
+   .container {
+      @include container;
+      flex-direction: column;
+      align-items: flex-start;
+   }
+
+   h3 {
+      text-transform: uppercase;
+      color: #999;
+      letter-spacing: 5px;
+      font-size: 16px;
+      margin: 40px 0;
+   }
+
+   .resume_list {
+      position: relative;
+      margin-top: 40px;
+
+      &_items {
+         &__block {
+
+            &:last-child {
+               padding-bottom: 0;
+            }
+
+            border-left: 2px solid $main-color;
+            padding-left: 25px;
+            padding-bottom: 50px;
+
+            &Title {
+               text-transform: uppercase;
+               color: $main-color;
+               font-size: 16px;
+               font-weight: 700;
+               font-family: Roboto Mono, monospace;
+            }
+
+            &Date {
+               font-family: Inconsolata, monospace;
+               font-size: 14px;
+               line-height: 20px;
+               color: #999;
+               padding-bottom: 10px;
+            }
+
+            &:before {
+               box-sizing: inherit;
+               content: '';
+               position: absolute;
+               width: 12px;
+               height: 12px;
+               border-radius: 50%;
+               border: 2px solid $main-color;
+               left: -5px;
+               background-color: white;
+            }
+         }
+      }
+   }
+
+   .skills {
+      width: 100%;
+
+      &_items {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+      }
+
+      &_item {
+         width: 45%;
+         margin-bottom: 35px;
+
+         &__title {
+            display: flex;
+            justify-content: space-between;
+            font-family: Roboto Mono, monospace;
+            font-size: 15px;
+            text-transform: uppercase;
+         }
+
+         .progress {
+            overflow: hidden;
+            text-align: center;
+            background-color: #d9d5d5;
+            border-radius: 3px;
+
+            &Bar {
+               background-color: $main-color;
+               height: 7px;
+            }
+         }
+      }
+   }
+
+
+   @media (max-width: 800px) {
+      .skills_items {
+         display: block;
+      }
+
+      .skills_item {
+         width: 100%;
+      }
+   }
+}
+

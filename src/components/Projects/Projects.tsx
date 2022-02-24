@@ -1,7 +1,7 @@
 import React from 'react'
-import s from './Portfolio.module.scss'
+import s from './Projects.module.scss'
 
-export const Portfolio = () => {
+export const Projects = () => {
    return (
       <div id={'projects'} className={s.portfolioBlock}>
          <div className={s.container}>
