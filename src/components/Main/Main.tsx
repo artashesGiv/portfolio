@@ -4,11 +4,11 @@ import {Header} from './Header/Header'
 import {Hello} from './Hello/Hello'
 import {useSelector} from 'react-redux'
 import {AppStateType} from '../../store/redux/store'
-import {initialStateMainType} from '../../store/mainReducer/types'
+import {InitialStateMainType} from '../../store/mainReducer/types'
 
 export const Main = () => {
 
-   const main = useSelector<AppStateType, initialStateMainType>(state => state.main)
+   const main = useSelector<AppStateType, InitialStateMainType>(state => state.main)
 
    return (
       <div className={s.main}>

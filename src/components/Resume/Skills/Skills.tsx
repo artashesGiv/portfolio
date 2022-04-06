@@ -1,9 +1,9 @@
 import React from 'react'
 import s from './../Resume.module.scss'
-import {skillsItem} from '../../../store/resumeReducer/types'
+import {SkillsItemType} from '../../../store/resumeReducer/types'
 
 type SkillsPropsType = {
-   skills: skillsItem[]
+   skills: SkillsItemType[]
 }
 
 export const Skills = ({skills}: SkillsPropsType) => {
@@ -20,7 +20,7 @@ export const Skills = ({skills}: SkillsPropsType) => {
 }
 
 type ItemPropsType = {
-   item: skillsItem
+   item: SkillsItemType
 }
 
 export const SkillsItem = ({item}: ItemPropsType) => {

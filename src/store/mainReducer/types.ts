@@ -1,4 +1,4 @@
-export type profileType = {
+export type ProfileType = {
    photo: string
    name: string
    age: Date
@@ -9,12 +9,12 @@ export type profileType = {
 }
 
 
-export type welcomeType = {
+export type WelcomeType = {
    welcome: string
    cv: string
 }
 
-export type initialStateMainType = {
-   profile: profileType
-   welcome: welcomeType
+export type InitialStateMainType = {
+   profile: ProfileType
+   welcome: WelcomeType
 }

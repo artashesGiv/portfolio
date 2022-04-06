@@ -1,11 +1,13 @@
 @import 'src/style/mixins';
+@import 'src/style/variables';
 
 .main {
    min-height: calc(100vh - 80px);
 
    .header {
-      background: linear-gradient(54deg, rgba(74, 76, 179, .95) 34%, hsla(0, 34%, 71%, .95));
+      background: $main-background;
       margin-bottom: 40px;
+      font-family: Roboto Mono, monospace;
 
       .headerContainer {
          @include container;
@@ -15,34 +17,11 @@
          .text {
             padding-left: 50px;
             color: white;
-            margin: 70px 0 50px;
+            margin: 70px 0 0;
 
             p {
                margin-bottom: 10px;
                font-family: Roboto Mono, monospace;
-            }
-
-            .profile {
-               margin-top: 30px;
-               width: 330px;
-               display: flex;
-               justify-content: space-between;
-
-               &Headers {
-                  text-transform: uppercase;
-                  color: rgba(255, 255, 255, 0.5);
-
-                  span {
-                     font-weight: bold;
-                  }
-               }
-
-               &Items, &Headers {
-                  display: flex;
-                  flex-direction: column;
-                  justify-content: space-between;
-                  min-height: 150px;
-               }
             }
          }
 

@@ -1,6 +1,6 @@
-import {initialStateMainType} from './types'
+import {InitialStateMainType} from './types'
 
-const initialStateMain: initialStateMainType = {
+const initialStateMain: InitialStateMainType = {
    profile: {
       name: 'Арташес Дживанян',
       address: '400002',
@@ -12,7 +12,6 @@ const initialStateMain: initialStateMainType = {
    },
    welcome: {
       cv: '',
-
       welcome: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dignissimos dolor ipsum magni
                neque
                odio
@@ -23,7 +22,7 @@ const initialStateMain: initialStateMainType = {
    },
 }
 
-export const mainReducer = (state: initialStateMainType = initialStateMain, action: actionsTypes): initialStateMainType => {
+export const mainReducer = (state: InitialStateMainType = initialStateMain, action: actionsTypes): InitialStateMainType => {
    switch (action.type) {
       default:
          return state

@@ -1,9 +1,9 @@
 import React from 'react'
 import s from './../Main.module.scss'
-import {welcomeType} from '../../../store/mainReducer/types'
+import {WelcomeType} from '../../../store/mainReducer/types'
 
 type HelloPropsType = {
-   welcome: welcomeType
+   welcome: WelcomeType
 }
 
 export const Hello = ({welcome}: HelloPropsType) => {

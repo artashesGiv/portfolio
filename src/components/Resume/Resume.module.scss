@@ -1,7 +1,6 @@
 @import 'src/style/mixins';
 
 .resume {
-
    .container {
       @include container;
       flex-direction: column;
@@ -16,7 +15,7 @@
       margin: 40px 0;
    }
 
-   .resume_list {
+   &_list {
       position: relative;
       margin-top: 40px;
 

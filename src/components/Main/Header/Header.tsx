@@ -2,17 +2,17 @@ import React from 'react'
 import s from '../Main.module.scss'
 import {Menu} from '../../Menu/Menu'
 import {useMediaQuery} from 'react-responsive'
-import {profileType} from '../../../store/mainReducer/types'
+import {ProfileType} from '../../../store/mainReducer/types'
 import moment from 'moment'
 
 type HeaderPropsType = {
-   profile: profileType
+   profile: ProfileType
 }
 
 export const Header = ({profile}: HeaderPropsType) => {
 
    const is1000Screen = useMediaQuery({query: '(max-width: 1000px)'})
-   const birthdayYear = moment().diff(profile.age, 'year')
+
 
    return (
       <header id={'header'} className={s.header}>
@@ -24,23 +24,38 @@ export const Header = ({profile}: HeaderPropsType) => {
             <div className={s.text}>
                <h1>{profile.name}</h1>
                <p>{profile.tags}</p>
-               <div className={s.profile}>
-                  <div className={s.profileHeaders}>
-                     <div><span>Возраст:</span></div>
-                     <div><span>Телефон:</span></div>
-                     <div><span>Email:</span></div>
-                     <div><span>Адрес:</span></div>
-                  </div>
-                  <div className={s.profileItems}>
-                     <div>{birthdayYear}</div>
-                     <div>{profile.phone}</div>
-                     <div>{profile.email}</div>
-                     <div>{profile.address}</div>
-                  </div>
-
-               </div>
+               <MainInfoTable profile={profile}/>
             </div>
          </div>
       </header>
+   )
+}
+
+
+const MainInfoTable = ({profile}: { profile: ProfileType }) => {
+
+   const age = moment().diff(profile.age, 'year')
+
+   return (
+      <table className={'table'}>
+         <tbody>
+         <tr>
+            <td>age:</td>
+            <td>{age}</td>
+         </tr>
+         <tr>
+            <td>email:</td>
+            <td><a href={`mailto:${profile.email}`}>{profile.email}</a></td>
+         </tr>
+         <tr>
+            <td>phone:</td>
+            <td><a href={`tel:${profile.phone}`}>{profile.phone}</a></td>
+         </tr>
+         <tr>
+            <td>address:</td>
+            <td>{profile.address}</td>
+         </tr>
+         </tbody>
+      </table>
    )
 }

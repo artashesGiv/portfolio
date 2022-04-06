@@ -1,9 +1,9 @@
-import {initialStateResumeType, timelineItem} from '../../../store/resumeReducer/types'
+import {InitialStateResumeType, TimelineItemType} from '../../../store/resumeReducer/types'
 import s from '../Resume.module.scss'
 import React from 'react'
 
 type ResumePropsType = {
-   resume: initialStateResumeType
+   resume: InitialStateResumeType
 }
 export const Timeline = ({resume}: ResumePropsType) => {
    return (
@@ -31,9 +31,8 @@ export const Timeline = ({resume}: ResumePropsType) => {
    )
 }
 
-
 type ItemPropsType = {
-   item: timelineItem
+   item: TimelineItemType
 }
 const TimelineItem = ({item}: ItemPropsType) => {
    return (

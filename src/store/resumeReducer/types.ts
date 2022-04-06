@@ -1,17 +1,17 @@
-export type initialStateResumeType = {
+export type InitialStateResumeType = {
    mainDescription: string
-   education: timelineItem[]
-   employment: timelineItem[]
-   skills: skillsItem[]
+   education: TimelineItemType[]
+   employment: TimelineItemType[]
+   skills: SkillsItemType[]
 }
 
-export type timelineItem = {
+export type TimelineItemType = {
    title: string
    date: string
    description: string
 }
 
-export type skillsItem = {
+export type SkillsItemType = {
    title: string
    percent: number
 }

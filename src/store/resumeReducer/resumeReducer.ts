@@ -1,7 +1,7 @@
-import {initialStateResumeType} from './types'
+import {InitialStateResumeType} from './types'
 
 
-const initialStateResume: initialStateResumeType = {
+const initialStateResume: InitialStateResumeType = {
    mainDescription: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam architecto asperiores 
    aspernatur, aut, consequatur corporis cum dicta doloremque dolores eaque earum eos excepturi fuga id illo incidunt 
    laborum libero minus modi neque nihil nisi nostrum odio omnis quaerat quibusdam quisquam reiciendis ullam veritatis.
@@ -68,7 +68,7 @@ const initialStateResume: initialStateResumeType = {
    ],
 }
 
-export const resumeReducer = (state: initialStateResumeType = initialStateResume, action: actionsTypes): initialStateResumeType => {
+export const resumeReducer = (state: InitialStateResumeType = initialStateResume, action: actionsTypes): InitialStateResumeType => {
    switch (action.type) {
       default:
          return state
