@@ -1,7 +1,6 @@
 import React from 'react'
 import s from '../Main.module.scss'
 import {Menu} from '../../Menu/Menu'
-import {useMediaQuery} from 'react-responsive'
 import {ProfileType} from '../../../store/mainReducer/types'
 import moment from 'moment'
 
@@ -11,12 +10,11 @@ type HeaderPropsType = {
 
 export const Header = ({profile}: HeaderPropsType) => {
 
-   const is1000Screen = useMediaQuery({query: '(max-width: 1000px)'})
 
 
    return (
       <header id={'header'} className={s.header}>
-         {!is1000Screen && <Menu/>}
+         <Menu/>
          <div className={s.headerContainer}>
             <div className={s.photo}>
                <img src={profile.photo} alt={'img'} height={380}/>

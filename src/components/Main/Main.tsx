@@ -14,6 +14,7 @@ export const Main = () => {
       <div className={s.main}>
          <Header profile={main.profile}/>
          <Hello welcome={main.welcome}/>
+         <hr/>
       </div>
    )
 }

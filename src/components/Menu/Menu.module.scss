@@ -5,26 +5,98 @@
 
    .container {
       @include container;
-      justify-content: flex-start;
+   }
+
+   .navSmall {
+
+      ul {
+         display: flex;
+         flex-direction: column;
+         gap: 12px;
+         padding: 0;
+         margin-top: 50px;
+
+         li {
+            align-self: center;
+            text-align: center;
+            list-style: none;
+            width: 125px;
+         }
+      }
+
+      a {
+         @include Link;
+         color: black !important;
+
+         &:hover {
+            color: lighten($main-color, 15%) !important;
+
+            &:after {
+               content: '';
+            }
+         }
+      }
    }
 
    .nav {
       display: flex;
       justify-content: space-between;
       margin-top: 50px;
+
       ul {
          display: flex;
          padding: 0;
+
          li {
             list-style: none;
             width: 125px;
+
             a {
                @include Link
             }
          }
       }
+   }
 
+   &Scroll {
+      position: fixed;
+      z-index: 1000;
+      background-color: #fff;
+      width: 100%;
+      box-shadow: 0 5px 8px 0 rgba(34, 60, 80, 0.2);
+
+      .nav {
+         margin-top: 0;
+
+         a {
+            color: black !important;
+
+            &:hover {
+               color: lighten($main-color, 15%) !important;
+            }
+         }
+      }
+   }
+
+   .menuBtn {
+      border: none;
+      width: 20px;
+      height: 20px;
+      background: transparent;
+      cursor: pointer;
+      font-weight: bold;
+      color: white;
+
+      &:hover {
+         color: darken(#fff, 20%);
+      }
+   }
+
+   .menuBtnScroll {
+      color: black;
+
+      &:hover {
+         color: lighten($main-color, 15%);
+      }
    }
 }
-
-

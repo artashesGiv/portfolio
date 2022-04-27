@@ -7,7 +7,7 @@ import {ProfileType} from '../../store/mainReducer/types'
 export const Footer = () => {
 
    return (
-      <section id={'contacts'} className={s.footer}>
+      <section id={'contact'} className={s.footer}>
          <div className={s.container}>
             <h2>Get in touch</h2>
             <div className={s.contacts}>
@@ -19,7 +19,7 @@ export const Footer = () => {
                   <ContactForm/>
                </div>
             </div>
-            <span className={s.footerRights}>© 2022 Artashes Dzhivanian All Rights Reserved</span>
+            <span className={s.footerCopyright}>© 2022 Artashes Dzhivanian</span>
          </div>
       </section>
    )

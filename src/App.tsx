@@ -9,9 +9,7 @@ export const App = () => {
    return (
       <>
          <Main/>
-         <hr/>
          <Resume/>
-         <hr/>
          <Portfolio/>
          <Footer/>
       </>

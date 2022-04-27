@@ -14,6 +14,7 @@ export const Resume = () => {
          <div className={s.container}>
             <Timeline resume={resume}/>
             <Skills skills={resume.skills}/>
+            <hr/>
          </div>
       </section>
    )

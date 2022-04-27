@@ -5,18 +5,21 @@ type ModalPropsType = {
    active: boolean
    setActive: () => void
    children: any
+   scroll?: boolean
 }
 
-export const Modal = ({active, setActive, children}: ModalPropsType) => {
+export const Modal = ({active, setActive, children, scroll}: ModalPropsType) => {
 
    const onKeyPress = (e: KeyboardEvent) => {
       active && e.key === 'Escape' && setActive()
    }
 
    useEffect(() => {
-      active
-         ? document.body.classList.add('modal-open')
-         : document.body.classList.remove('modal-open')
+      if (!scroll) {
+         active
+            ? document.body.classList.add('modal-open')
+            : document.body.classList.remove('modal-open')
+      }
       document.addEventListener('keydown', onKeyPress)
       return () => document.removeEventListener('keydown', onKeyPress)
    })
