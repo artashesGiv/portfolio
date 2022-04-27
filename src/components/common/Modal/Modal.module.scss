@@ -8,7 +8,7 @@
    top: 0;
    left: 0;
    z-index: 1000;
-   display: none;
+   display: flex;
    overflow-y: auto;
    overflow-x: hidden;
 
@@ -54,10 +54,5 @@
       @media (max-width: 500px) {
          width: 90%;
       }
-   }
-
-   &_active {
-      display: flex;
-      justify-content: center;
    }
 }

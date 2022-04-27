@@ -8,7 +8,7 @@ export const Nav = ({className = s.nav}: { className?: string }) => {
       const scrollTo = (element: any) => {
          window.scroll({
             left: 0,
-            top: element.offsetTop,
+            top: element.offsetTop - 50,
             behavior: 'smooth',
          })
       }

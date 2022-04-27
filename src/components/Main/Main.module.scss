@@ -48,6 +48,12 @@
       .btn {
          @include Button;
          margin-top: 30px;
+         text-align: center;
+
+         a {
+            text-decoration: none;
+            color: white;
+         }
       }
    }
 

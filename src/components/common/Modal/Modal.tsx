@@ -1,5 +1,7 @@
 import s from './Modal.module.scss'
 import React, {useEffect} from 'react'
+import {CSSTransition} from 'react-transition-group'
+import './ModalTransition.scss'
 
 type ModalPropsType = {
    active: boolean
@@ -25,15 +27,19 @@ export const Modal = ({active, setActive, children, scroll}: ModalPropsType) => 
    })
 
    return (
-      <div className={!active ? s.modal : `${s.modal} ${s.modal_active}`} onClick={setActive}>
-         <div className={s.modal__content} onClick={(e) => e.stopPropagation()}>
-            <div className={s.close}>
-               <button onClick={setActive}>x</button>
+      <>
+         <CSSTransition in={active} timeout={300} unmountOnExit classNames={'modal-transition'}>
+            <div className={s.modal} onClick={setActive}>
+               <div className={s.modal__content} onClick={(e) => e.stopPropagation()}>
+                  <div className={s.close}>
+                     <button onClick={() => setActive()}>X</button>
+                  </div>
+                  <div className={s.modal__content_body}>
+                     {children}
+                  </div>
+               </div>
             </div>
-            <div className={s.modal__content_body}>
-               {children}
-            </div>
-         </div>
-      </div>
+         </CSSTransition>
+      </>
    )
 }

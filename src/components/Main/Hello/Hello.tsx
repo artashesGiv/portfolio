@@ -12,7 +12,9 @@ export const Hello = ({welcome}: HelloPropsType) => {
          <div className={s.helloContainer}>
             <h2>Hi</h2>
             <p>{welcome.welcome}</p>
-            <button className={s.btn}>Download CV</button>
+            <div className={s.btn}>
+               <a href={welcome.cv} target={'_blank'} rel="noreferrer">Download CV</a>
+            </div>
          </div>
       </section>
    )

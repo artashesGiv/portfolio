@@ -15,7 +15,6 @@ export const Menu = () => {
          setScroll(scrollPos < currentScrollPos)
       }
       window.addEventListener('scroll', scrollListener)
-      return () => window.removeEventListener('scroll', scrollListener)
    })
 
    const menuClass = !scroll ? s.menu : `${s.menu} ${s.menuScroll}`
@@ -46,7 +45,7 @@ const AdaptiveMenu = ({scroll}: { scroll: boolean }) => {
             is1000screen ?
                <>
                   <button onClick={changeModalActive} className={btnClass}>MENU</button>
-                  <Modal active={modalActive} setActive={changeModalActive} scroll={true} >
+                  <Modal active={modalActive} setActive={changeModalActive} >
                      <Nav className={s.navSmall}/>
                   </Modal>
                </> :

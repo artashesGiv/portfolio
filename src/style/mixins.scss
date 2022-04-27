@@ -51,8 +51,8 @@
    font-weight: 900;
    border: none;
    outline: none;
+   cursor: pointer;
    &:hover {
-      cursor: pointer;
       background: lighten($main-color, 3%);
    }
 }
